@@ -14,7 +14,8 @@ import pageObjects.SignIn;
 
 public class CreateNewSnippet {
 
-		public static void main(String[] args) throws InterruptedException {
+		public static void main(String[] args) throws InterruptedException 
+		{
 			
 			// Create a new instance of the chrome driver
 			System.setProperty("webdriver.chrome.driver", "D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -50,12 +51,9 @@ public class CreateNewSnippet {
 		    String snippetText;
 		    snippetText = driver.findElement(By.xpath("//*[@id='0']")).getText();
 		    Assert.assertEquals(snippetText,"This is a new test Snippet");
-		  
-		    
+		  		    
 		     // Print a successful message
-	        System.out.println("Successfully added snippet");
-	 	         
-		    
+	        System.out.println("Successfully added snippet");	 	        
 		    driver.quit();
 
 	}

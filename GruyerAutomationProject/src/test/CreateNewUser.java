@@ -15,7 +15,8 @@ import pageObjects.SignUp;
 public class CreateNewUser {
 
 
-		public static void main(String[] args) throws InterruptedException {
+		public static void main(String[] args) throws InterruptedException 
+		{
 			
 			// Create a new instance of the chrome driver
 			System.setProperty("webdriver.chrome.driver", "D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -40,20 +41,21 @@ public class CreateNewUser {
 	         
 		    SignUp.select_UserNameTextbox(driver).click();
 		    SignUp.select_UserNameTextbox(driver).sendKeys(dateString);
-		    Thread.sleep(10000);
+		    Thread.sleep(3000);
 		    
 		    //Enter password
 		    SignUp.select_Password(driver).click();
 		    SignUp.select_Password(driver).sendKeys("password");
-		    Thread.sleep(10000);
+		    Thread.sleep(3000);
 		    
 		    //Click Create Account
 		    SignUp.btn_CreateAccount(driver).click();
-		    Thread.sleep(5000);
-		    System.out.println("Successfully Created User");
-		    
+		    String ActualMessage;
+		    String ExpectedMessage;
+		    ExpectedMessage = "Account created.";
+		    ActualMessage = driver.findElement(By.xpath("/html/body/div[2]")).getText();
+		    Assert.assertEquals(ExpectedMessage,ActualMessage);
+		    System.out.println("Successfully Created User");		    
 		    driver.quit();
-
 	}
-
 }

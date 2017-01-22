@@ -14,7 +14,8 @@ import pageObjects.SignUp;
 
 public class DuplicateUserTest {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException 
+	{
 		
 		// Create a new instance of the chrome driver
 		System.setProperty("webdriver.chrome.driver", "D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -34,15 +35,14 @@ public class DuplicateUserTest {
 	    Thread.sleep(3000);
 	    
 	    //select user name text box and enter a username which alreasy exists, in this case it will be test       
-         
-	    SignUp.select_UserNameTextbox(driver).click();
+        SignUp.select_UserNameTextbox(driver).click();
 	    SignUp.select_UserNameTextbox(driver).sendKeys("test");
 	    Thread.sleep(3000);
 	    
 	    //Enter password
 	    SignUp.select_Password(driver).click();
 	    SignUp.select_Password(driver).sendKeys("test");
-	    Thread.sleep(10000);
+	    Thread.sleep(3000);
 	    
 	    //Click Create Account
 	    SignUp.btn_CreateAccount(driver).click();
@@ -50,8 +50,7 @@ public class DuplicateUserTest {
 	    ErrorMessage = driver.findElement(By.xpath("/html/body/div[2]")).getText();
 	    Assert.assertEquals("User already exists.", ErrorMessage);
 	    
-	    System.out.println("Can not enter Duplicate user - test passed");
-	    
+	    System.out.println("Can not enter Duplicate user - test passed");	    
 	    driver.quit();
 	}
 

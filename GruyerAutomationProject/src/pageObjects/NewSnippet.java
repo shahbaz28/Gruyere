@@ -8,7 +8,8 @@ import org.openqa.selenium.WebElement;
 public class NewSnippet {
 	private static WebElement element = null;
 	
-	 public static WebElement select_SnippetTextbox(WebDriver driver){
+	 public static WebElement select_SnippetTextbox(WebDriver driver)
+	 {
 		 
 		    element = driver.findElement(By.xpath("/html/body/div[2]/div/form/textarea"));
 		 
@@ -16,7 +17,8 @@ public class NewSnippet {
 
 		}
 
-	 public static WebElement select_Submit(WebDriver driver){
+	 public static WebElement select_Submit(WebDriver driver)
+	 {
 		 
 		    element = driver.findElement(By.xpath("/html/body/div[2]/div/form/table/tbody/tr/td[2]/input"));
 		 
