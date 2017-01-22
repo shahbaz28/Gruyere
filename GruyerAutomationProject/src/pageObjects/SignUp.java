@@ -16,7 +16,7 @@ public class SignUp {
 	 
 	    return element;	 
 
-	}
+	 }
 	 
 	 public static WebElement select_Password(WebDriver driver)
 	 {

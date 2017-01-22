@@ -21,7 +21,7 @@ public class SignIn {
 		    element = driver.findElement(By.xpath("/html/body/div[3]/form/table/tbody/tr[2]/td[2]/input"));
 		 
 		    return element;	 
-		 }
+     }
 	 
 	 public static WebElement loginButton(WebDriver driver)
 	 {
@@ -29,7 +29,7 @@ public class SignIn {
 		    element = driver.findElement(By.xpath("/html/body/div[3]/form/table/tbody/tr[3]/td[2]/input"));
 		 
 		    return element;	 
-		 }
+	 }
 	 
 	 
 }
